@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200107 16:32:47.405" generator="Robot 3.1.2 (Python 2.7.16 on win32)">
+<suite source="C:\robotclouddrive\Resource\Control.robot" id="s1" name="Control">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Goble Login</arg>
+<arg>AND</arg>
+<arg>sleep</arg>
+<arg>2s</arg>
+</arguments>
+<kw name="Goble Login" library="Login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200107 16:32:47.614" level="INFO">Opening browser 'gc' to base url 'http:202.60.194.176/Clouddrive/'.</msg>
+<status status="PASS" endtime="20200107 16:32:50.222" starttime="20200107 16:32:47.614"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1920</arg>
+<arg>1440</arg>
+</arguments>
+<status status="PASS" endtime="20200107 16:32:51.350" starttime="20200107 16:32:50.222"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.3 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20200107 16:32:51.350" starttime="20200107 16:32:51.350"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//input[@name="USERNAME"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20200107 16:32:51.990" starttime="20200107 16:32:51.350"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="USERNAME"]</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20200107 16:32:51.992" level="INFO">Typing text 'Jittraporn@netbay.co.th' into text field '//input[@name="USERNAME"]'.</msg>
+<status status="PASS" endtime="20200107 16:32:53.035" starttime="20200107 16:32:51.991"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="PASSWORD"]</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200107 16:32:53.037" level="INFO">Typing text 'Netbay@123' into text field '//input[@name="PASSWORD"]'.</msg>
+<status status="PASS" endtime="20200107 16:32:54.091" starttime="20200107 16:32:53.036"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@id="go"]</arg>
+</arguments>
+<msg timestamp="20200107 16:32:54.092" level="INFO">Clicking element '//button[@id="go"]'.</msg>
+<status status="PASS" endtime="20200107 16:32:55.779" starttime="20200107 16:32:54.092"></status>
+</kw>
+<status status="PASS" endtime="20200107 16:32:55.779" starttime="20200107 16:32:47.614"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200107 16:32:57.779" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20200107 16:32:57.779" starttime="20200107 16:32:55.779"></status>
+</kw>
+<status status="PASS" endtime="20200107 16:32:57.779" starttime="20200107 16:32:47.613"></status>
+</kw>
+<test id="s1-t1" name="Validate User">
+<kw name="Approve id" library="function">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="menu_4"]/a</arg>
+</arguments>
+<msg timestamp="20200107 16:32:57.780" level="INFO">Clicking element 'xpath://*[@id="menu_4"]/a'.</msg>
+<status status="PASS" endtime="20200107 16:32:58.978" starttime="20200107 16:32:57.780"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath://*[@id="searchby"]</arg>
+<arg>email</arg>
+</arguments>
+<msg timestamp="20200107 16:32:58.978" level="INFO">Selecting options from selection list 'xpath://*[@id="searchby"]' by value email.</msg>
+<status status="PASS" endtime="20200107 16:33:01.254" starttime="20200107 16:32:58.978"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="searchkey"]</arg>
+<arg>paveepu@gmail.com</arg>
+</arguments>
+<msg timestamp="20200107 16:33:01.254" level="INFO">Typing text 'paveepu@gmail.com' into text field 'xpath://*[@id="searchkey"]'.</msg>
+<status status="PASS" endtime="20200107 16:33:02.468" starttime="20200107 16:33:01.254"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="searchData"]</arg>
+</arguments>
+<msg timestamp="20200107 16:33:02.469" level="INFO">Clicking element 'xpath://*[@id="searchData"]'.</msg>
+<status status="PASS" endtime="20200107 16:33:03.137" starttime="20200107 16:33:02.468"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="dataspn"]/tr[1]/td[1]/button</arg>
+</arguments>
+<msg timestamp="20200107 16:33:03.138" level="INFO">Clicking element 'xpath://*[@id="dataspn"]/tr[1]/td[1]/button'.</msg>
+<status status="PASS" endtime="20200107 16:33:03.884" starttime="20200107 16:33:03.137"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>name=status</arg>
+<arg>Y</arg>
+</arguments>
+<msg timestamp="20200107 16:33:03.886" level="INFO">Selecting options from selection list 'name=status' by value Y.</msg>
+<status status="PASS" endtime="20200107 16:33:06.249" starttime="20200107 16:33:03.884"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200107 16:33:09.251" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20200107 16:33:09.251" starttime="20200107 16:33:06.250"></status>
+</kw>
+<status status="PASS" endtime="20200107 16:33:09.252" starttime="20200107 16:32:57.780"></status>
+</kw>
+<status status="PASS" endtime="20200107 16:33:09.253" critical="yes" starttime="20200107 16:32:57.779"></status>
+</test>
+<kw type="teardown" name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200107 16:33:11.262" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20200107 16:33:11.262" starttime="20200107 16:33:09.260"></status>
+</kw>
+<status status="PASS" endtime="20200107 16:33:11.262" starttime="20200107 16:32:47.407"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Control" pass="1">Control</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200107 16:32:47.401" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' #' in file 'C:\robotclouddrive\Resource\Control.robot' on line 15.</msg>
+</errors>
+</robot>

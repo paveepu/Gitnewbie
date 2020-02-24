@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200114 14:27:57.155" generator="Robot 3.1.2 (Python 2.7.16 on win32)">
+<suite source="C:\robotshippingnet\Resource\db.robot" id="s1" name="Db">
+<kw type="setup" name="Connect To Database" library="DatabaseLibrary">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+</arguments>
+<msg timestamp="20200114 14:27:57.382" level="FAIL">ImportError: No module named pymysql</msg>
+<status status="FAIL" endtime="20200114 14:27:57.382" starttime="20200114 14:27:57.380"></status>
+</kw>
+<test id="s1-t1" name="Select DB">
+<status status="FAIL" endtime="20200114 14:27:57.383" critical="yes" starttime="20200114 14:27:57.382">Parent suite setup failed:
+ImportError: No module named pymysql</status>
+</test>
+<test id="s1-t2" name="Retrieve Row Count">
+<tags>
+<tag>db</tag>
+<tag>smoke</tag>
+</tags>
+<status status="FAIL" endtime="20200114 14:27:57.385" critical="yes" starttime="20200114 14:27:57.384">Parent suite setup failed:
+ImportError: No module named pymysql</status>
+</test>
+<kw type="teardown" name="Sleep 2s">
+<msg timestamp="20200114 14:27:57.391" level="FAIL">No keyword with name 'Sleep 2s' found. Did you mean:
+    BuiltIn.Sleep</msg>
+<status status="FAIL" endtime="20200114 14:27:57.391" starttime="20200114 14:27:57.391">No keyword with name 'Sleep 2s' found. Did you mean:
+    BuiltIn.Sleep</status>
+</kw>
+<status status="FAIL" endtime="20200114 14:27:57.391" starttime="20200114 14:27:57.157">Suite setup failed:
+ImportError: No module named pymysql
+
+Also suite teardown failed:
+No keyword with name 'Sleep 2s' found. Did you mean:
+    BuiltIn.Sleep</status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">db</stat>
+<stat fail="1" pass="0">smoke</stat>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Db" pass="0">Db</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

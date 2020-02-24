@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191211 11:01:08.486" generator="Robot 3.1.2 (Python 2.7.16 on win32)">
+<suite source="C:\robotexpress\resources\caseMaxlenght.robot" id="s1" name="caseMaxlenght">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Goble Login</arg>
+<arg>AND</arg>
+<arg>Choose menu Pre-Arrival Export</arg>
+<arg>AND</arg>
+<arg>Click Edit Botton First Reference</arg>
+<arg>AND</arg>
+<arg>Input Data Import Declaration Control Type Text</arg>
+<arg>AND</arg>
+<arg>Clear Field List</arg>
+</arguments>
+<kw name="Goble Login" library="login">
+<kw name="Open Browser">
+<arguments>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191211 11:01:08.953" level="FAIL">Multiple keywords with name 'Open Browser' found. Give the full name of the keyword you want to use:
+    Selenium2Library.Open Browser
+    SeleniumLibrary.Open Browser</msg>
+<status status="FAIL" endtime="20191211 11:01:08.953" starttime="20191211 11:01:08.953"></status>
+</kw>
+<status status="FAIL" endtime="20191211 11:01:08.953" starttime="20191211 11:01:08.953"></status>
+</kw>
+<status status="FAIL" endtime="20191211 11:01:08.953" starttime="20191211 11:01:08.953"></status>
+</kw>
+<test id="s1-t1" name="Validate Control max length Vessel Name">
+<status status="FAIL" endtime="20191211 11:01:08.953" critical="yes" starttime="20191211 11:01:08.953">Parent suite setup failed:
+Multiple keywords with name 'Open Browser' found. Give the full name of the keyword you want to use:
+    Selenium2Library.Open Browser
+    SeleniumLibrary.Open Browser</status>
+</test>
+<kw type="teardown" name="Close Browser">
+<msg timestamp="20191211 11:01:08.953" level="FAIL">Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    Selenium2Library.Close Browser
+    SeleniumLibrary.Close Browser</msg>
+<status status="FAIL" endtime="20191211 11:01:08.953" starttime="20191211 11:01:08.953">Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    Selenium2Library.Close Browser
+    SeleniumLibrary.Close Browser</status>
+</kw>
+<status status="FAIL" endtime="20191211 11:01:08.953" starttime="20191211 11:01:08.502">Suite setup failed:
+Multiple keywords with name 'Open Browser' found. Give the full name of the keyword you want to use:
+    Selenium2Library.Open Browser
+    SeleniumLibrary.Open Browser
+
+Also suite teardown failed:
+Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    Selenium2Library.Close Browser
+    SeleniumLibrary.Close Browser</status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="caseMaxlenght" pass="0">caseMaxlenght</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
